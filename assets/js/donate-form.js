@@ -24,4 +24,13 @@ document.addEventListener("DOMContentLoaded", () => {
             selectedRadio.checked = true; // Keep the last selected amount radio button checked
         }
     });
+
+	// Redirect any donate form submission to donations page
+	const donateForms = document.querySelectorAll('.ul-donate-form, .ul-donation-details-form');
+	donateForms.forEach((form) => {
+		form.addEventListener('submit', (event) => {
+			event.preventDefault();
+			window.location.href = 'donation-details.html';
+		});
+	});
 });
