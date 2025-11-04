@@ -221,6 +221,8 @@ button {
 }
 .logo {
   max-width: clamp(130px, 11.56vw, 220px);
+  height: 75px;
+  border-radius: 15px;
 }
 
 .ul-bs-row {
