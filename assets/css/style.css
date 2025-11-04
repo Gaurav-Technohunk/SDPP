@@ -1996,6 +1996,13 @@ button {
     display: none;
   }
 }
+/* floating symbol for About background (Om/Swastik) */
+.ul-about-vectors .ul-floating-symbol {
+  font-size: clamp(48px, 11.82vw, 225px);
+  line-height: 1;
+  color: rgba(238, 77, 85, 0.15);
+  font-family: var(--font-quicksand);
+}
 .ul-about-2 {
   overflow: hidden;
 }
