@@ -1627,8 +1627,9 @@ button {
   bottom: 0;
   z-index: 0;
   pointer-events: none;
-  left: clamp(15px, 4.2vw, 80px);
-  max-width: clamp(284px, 29.64vw, 564px);
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: clamp(200px, 29.64vw, 404px);
 }
 .ul-banner-sub-title {
   font-weight: 600;
@@ -2088,7 +2089,7 @@ button {
   inset: 0;
   left: auto;
   border-radius: 999px 0 0 999px;
-  background: url(../img/donations-bg-img.jpg) no-repeat center center/cover;
+  background: url(../img/donations-bg-img-2.png) no-repeat center center/cover;
   width: clamp(0px, 46.56vw, 886px);
 }
 @media screen and (max-width: 991px) {
