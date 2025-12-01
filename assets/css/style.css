@@ -1597,8 +1597,8 @@ button {
   content: "";
   position: absolute;
   inset: 0;
-  background: url(../img/banner-bg-shape.svg) no-repeat center center/cover;
-  mix-blend-mode: multiply;
+  background: radial-gradient(circle at 15% 20%, rgba(255, 204, 153, 0.18) 0%, rgba(255, 204, 153, 0) 45%), linear-gradient(135deg, #3B1F12 0%, #2C1810 55%, #1A0904 100%);
+  opacity: 0.98;
   pointer-events: none;
   z-index: -1;
 }
@@ -1629,7 +1629,7 @@ button {
   pointer-events: none;
   left: 50%;
   transform: translateX(-50%);
-  max-width: clamp(200px, 29.64vw, 404px);
+  max-width: clamp(100px, 29.64vw, 250px);
 }
 .ul-banner-sub-title {
   font-weight: 600;
@@ -1669,7 +1669,7 @@ button {
   width: clamp(40px, 2.63vw, 50px);
   aspect-ratio: 1/1;
   margin-left: calc(0% - clamp(12px, 0.79vw, 15px));
-  border: 3px solid var(--white);
+  border: 3px solid var(--ul-secondary);
   border-radius: 999px;
   background-color: var(--ul-black);
   display: flex;
@@ -1678,6 +1678,16 @@ button {
   font-size: clamp(11px, 0.74vw, 14px);
   font-weight: 800;
   color: var(--ul-primary);
+}
+.ul-banner-stat .imgs img {
+  border-color: var(--white);
+  background-color: transparent;
+}
+.ul-banner-stat .imgs .number {
+  background-color: var(--ul-primary);
+  color: var(--white);
+  border-color: var(--ul-secondary);
+  box-shadow: 0 0 15px rgba(255, 166, 77, 0.4);
 }
 .ul-banner-stat .imgs > *:first-child {
   margin-left: 0;
@@ -1726,7 +1736,7 @@ button {
   inset: 0;
   z-index: 1;
   pointer-events: none;
-  background: linear-gradient(180deg, #1E252F -5.34%, rgba(30, 37, 47, 0) 39.75%);
+  background: linear-gradient(180deg, #3B1F12 -5.34%, rgba(43, 24, 16, 0) 39.75%);
 }
 .ul-banner-img-vectors > * {
   position: absolute;
@@ -1874,6 +1884,40 @@ button {
 .ul-about-imgs {
   position: relative;
   z-index: 1;
+}
+.ul-about-imgs .img-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+}
+.ul-about-imgs .img-wrapper img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.ul-about-imgs .img-wrapper .img-overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10px 18px;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--white);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.85) 95%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  font-weight: 600;
+}
+.ul-about-imgs .img-wrapper .img-overlay::before {
+  content: "";
+  width: 28px;
+  height: 2px;
+  margin-right: 8px;
+  background: var(--ul-secondary);
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.7);
 }
 .ul-about-imgs-vectors .vector-1 {
   position: absolute;
