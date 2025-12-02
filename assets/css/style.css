@@ -76,7 +76,6 @@ body {
   font-family: var(--font-primary);
   margin: auto;
   font-size: clamp(13px, 0.84vw, 16px);
-  position: fixed;
 }
 
 a,
@@ -5245,4 +5244,51 @@ button {
 .ul-pricing-package-btn:hover {
   background-color: var(--ul-primary);
   color: var(--white);
-}/*# sourceMappingURL=style.css.map */
+}
+
+/* Google Translate bottom bar */
+#google_translate_bottom_bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.85);
+  padding: 6px 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+#google_translate_bottom_bar .translate-label {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+#google_translate_element select {
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 2px 6px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  font-size: 13px;
+}
+
+/* Hide default Google top banner */
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+
+body {
+  top: 0 !important;
+}
+
+/* Reserve a bit of space so content isn't fully hidden behind bar on small screens */
+@media screen and (max-width: 767px) {
+  body {
+    padding-bottom: 40px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
